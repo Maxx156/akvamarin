@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мероприятия — Аквамарин</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="bubbles"></div>
+    <header>
+        <div class="logo">
+            <i class="fas fa-water"></i> Аквамарин
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="events.html" class="active">Мероприятия</a></li>
+                <li><a href="artists.html">Артисты</a></li>
+                <li><a href="about.html">О цирке</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="auth-area">
+            <span id="userGreeting" style="display: none;">
+                Привет, <span id="userName"></span>
+                <a href="profile.html" class="profile-link"><i class="fas fa-user-circle"></i></a>
+                <button id="logoutBtn" class="logout-btn">Выйти</button>
+            </span>
+            <button id="loginBtn" class="btn-primary"><i class="fas fa-user"></i> Вход / Регистрация</button>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="page-title">Афиша мероприятий</h1>
+        <div class="events-grid" id="eventsGrid">
+            <div class="event-card" data-event-id="1" data-event-title="Симфония воды" data-event-date="25 февраля 19:00" data-event-price="1500">
+                <img src="https://lug-info.ru/storage/c/2023/07/11/1715174225_048001_64.jpg" alt="Симфония воды">
+                <h3>Симфония воды</h3>
+                <p class="event-date">25 февраля 19:00</p>
+                <p class="event-desc">Завораживающее шоу с фонтанами и живым оркестром.</p>
+                <p class="event-price">от 1500 ₽</p>
+                <button class="btn-buy">Купить билет</button>
+            </div>
+            <div class="event-card" data-event-id="2" data-event-title="Ледяное сердце" data-event-date="28 февраля 18:00" data-event-price="1800">
+                <img src="https://spb.afishakids.ru/upload/iblock/33d/m7kgcgcq5h0o00acncpzucvtwnm3x8x5/afishakids-vodnoe-show-ledyanoe-serdtse.jpg" alt="Ледяное сердце">
+                <h3>Ледяное сердце</h3>
+                <p class="event-date">28 февраля 18:00</p>
+                <p class="event-desc">Ледовое представление с элементами водного шоу.</p>
+                <p class="event-price">от 1800 ₽</p>
+                <button class="btn-buy">Купить билет</button>
+            </div>
+            <div class="event-card" data-event-id="3" data-event-title="Карнавал в Аквамарине" data-event-date="2 марта 15:00" data-event-price="1300">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/37/0b/42/caption.jpg" alt="Карнавал">
+                <h3>Карнавал в Аквамарине</h3>
+                <p class="event-date">2 марта 15:00</p>
+                <p class="event-desc">Красочное шоу для всей семьи.</p>
+                <p class="event-price">от 1300 ₽</p>
+                <button class="btn-buy">Купить билет</button>
+            </div>
+            <div class="event-card" data-event-id="4" data-event-title="Магия фонтанов" data-event-date="5 марта 20:00" data-event-price="2000">
+                <img src="https://family.by/uploads/posts/2024-02/1707890330_ak2a6388.jpg" alt="Магия фонтанов">
+                <h3>Магия фонтанов</h3>
+                <p class="event-date">5 марта 20:00</p>
+                <p class="event-desc">Ночное шоу с лазерами и водными спецэффектами.</p>
+                <p class="event-price">от 2000 ₽</p>
+                <button class="btn-buy">Купить билет</button>
+            </div>
+            <div class="event-card" data-event-id="5" data-event-title="Подводная одиссея" data-event-date="7 марта 17:00" data-event-price="1600">
+                <img src="https://kuda-spb.ru/uploads/faa818404de8a518a55731bb8d0dfebb.jpeg" alt="Подводная одиссея">
+                <h3>Подводная одиссея</h3>
+                <p class="event-date">7 марта 17:00</p>
+                <p class="event-desc">Путешествие в мир морских глубин.</p>
+                <p class="event-price">от 1600 ₽</p>
+                <button class="btn-buy">Купить билет</button>
+            </div>
+            <div class="event-card" data-event-id="6" data-event-title="Огни большого города" data-event-date="9 марта 19:30" data-event-price="1900">
+                <img src="https://nsk.kassy.ru/media/90/90c24391abcb6ac83d67616d5766bd72-30765_src.png" alt="Огни большого города">
+                <h3>Огни большого города</h3>
+                <p class="event-date">9 марта 19:30</p>
+                <p class="event-desc">Современное шоу с водным экраном.</p>
+                <p class="event-price">от 1900 ₽</p>
+                <button class="btn-buy">Купить билет</button>
+            </div>
+            <div class="event-card" data-event-id="7" data-event-title="Акварель" data-event-date="10 марта 16:00" data-event-price="1400">
+                <img src="https://www.osd.ru/ftproot/users/0000003/al0003670/0000136_24220232023_big.jpg" alt="Акварель">
+                <h3>Акварель</h3>
+                <p class="event-date">10 марта 16:00</p>
+                <p class="event-desc">Нежное шоу для романтиков.</p>
+                <p class="event-price">от 1400 ₽</p>
+                <button class="btn-buy">Купить билет</button>
+            </div>
+            <div class="event-card" data-event-id="8" data-event-title="Фонтан желаний" data-event-date="12 марта 20:30" data-event-price="2200">
+                <img src="https://kazan-circus.ru/wp-content/uploads/2024/06/EGRE1866-1024x683.jpg" alt="Фонтан желаний">
+                <h3>Фонтан желаний</h3>
+                <p class="event-date">12 марта 20:30</p>
+                <p class="event-desc">Загадайте желание под струи воды.</p>
+                <p class="event-price">от 2200 ₽</p>
+                <button class="btn-buy">Купить билет</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="waves"></div>
+        <p>&copy; 2026 Цирк танцующих фонтанов «Аквамарин»</p>
+        <div class="social">
+            <a href="#"><i class="fab fa-vk"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="tab">
+                <button class="tablinks active" id="loginTab">Вход</button>
+                <button class="tablinks" id="registerTab">Регистрация</button>
+            </div>
+            <div id="loginForm" class="tabcontent active">
+                <h3>Вход</h3>
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Пароль" required>
+                <button id="loginSubmit" class="btn-primary">Войти</button>
+                <p id="loginError" class="error"></p>
+            </div>
+            <div id="registerForm" class="tabcontent">
+                <h3>Регистрация</h3>
+                <input type="text" id="regName" placeholder="Имя" required>
+                <input type="email" id="regEmail" placeholder="Email" required>
+                <input type="password" id="regPassword" placeholder="Пароль (минимум 6 символов)" required>
+                <button id="registerSubmit" class="btn-primary">Зарегистрироваться</button>
+                <p id="registerError" class="error"></p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="buyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="buyModalTitle">Покупка билета</h2>
+            <p id="buyEventInfo"></p>
+            <label for="ticketQuantity">Количество билетов:</label>
+            <input type="number" id="ticketQuantity" min="1" max="10" value="1">
+            <p>Общая стоимость: <span id="totalPrice">0</span> ₽</p>
+            <button id="confirmBuy" class="btn-primary">Подтвердить покупку</button>
+            <p id="buyError" class="error"></p>
+        </div>
+    </div>
+
+    <div id="customToast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

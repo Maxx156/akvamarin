@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О цирке — Аквамарин</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="bubbles"></div>
+    <header>
+        <div class="logo">
+            <i class="fas fa-water"></i> Аквамарин
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="events.html">Мероприятия</a></li>
+                <li><a href="artists.html">Артисты</a></li>
+                <li><a href="about.html" class="active">О цирке</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="auth-area">
+            <span id="userGreeting" style="display: none;">
+                Привет, <span id="userName"></span>
+                <a href="profile.html" class="profile-link"><i class="fas fa-user-circle"></i></a>
+                <button id="logoutBtn" class="logout-btn">Выйти</button>
+            </span>
+            <button id="loginBtn" class="btn-primary"><i class="fas fa-user"></i> Вход / Регистрация</button>
+        </div>
+    </header>
+
+    <main class="about-page">
+        <h1 class="page-title">О цирке танцующих фонтанов</h1>
+        <div class="about-content">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-s/05/7c/50/3e/caption.jpg" alt="Цирк">
+            <div class="about-text">
+                <h2>История</h2>
+                <p>«Аквамарин» — первый в мире цирк, объединивший классическое цирковое искусство с технологиями танцующих фонтанов. Мы открылись в 2015 году и с тех пор порадовали более миллиона зрителей.</p>
+                <p>Идея создания принадлежит группе энтузиастов, которые хотели подарить людям новое ощущение магии. Сегодня наш цирк — это уникальная площадка, где вода становится главным героем представления.</p>
+                <h2>Технологии</h2>
+                <p>Наша арена оборудована уникальной системой водяных экранов, лазерной проекцией и акустикой премиум-класса. Специальные насосы создают более 1000 различных струй воды, которые синхронизируются с музыкой и светом.</p>
+                <p>Мы используем экологически чистые технологии, а вода после каждого шоу проходит многоступенчатую фильтрацию.</p>
+                <h2>Миссия</h2>
+                <p>Мы стремимся дарить радость и удивление людям всех возрастов. Каждое шоу — это симфония воды, света и таланта артистов.</p>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-number">10+</span>
+                <span>уникальных шоу</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">50+</span>
+                <span>артистов</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">1000+</span>
+                <span>представлений</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">5</span>
+                <span>международных наград</span>
+            </div>
+        </div>
+        <div class="awards">
+            <h2>Наши награды</h2>
+            <div class="awards-grid">
+                <div class="award-item">
+                    <i class="fas fa-trophy fa-3x"></i>
+                    <h3>Золотая арена</h3>
+                    <p>Международный фестиваль циркового искусства, 2018</p>
+                </div>
+                <div class="award-item">
+                    <i class="fas fa-medal fa-3x"></i>
+                    <h3>Гран-при «Водная феерия»</h3>
+                    <p>Конкурс водных шоу, 2020</p>
+                </div>
+                <div class="award-item">
+                    <i class="fas fa-star fa-3x"></i>
+                    <h3>Лучшее семейное шоу</h3>
+                    <p>Премия «Событие года», 2022</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="waves"></div>
+        <p>&copy; 2026 Цирк танцующих фонтанов «Аквамарин»</p>
+        <div class="social">
+            <a href="#"><i class="fab fa-vk"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="tab">
+                <button class="tablinks active" id="loginTab">Вход</button>
+                <button class="tablinks" id="registerTab">Регистрация</button>
+            </div>
+            <div id="loginForm" class="tabcontent active">
+                <h3>Вход</h3>
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Пароль" required>
+                <button id="loginSubmit" class="btn-primary">Войти</button>
+                <p id="loginError" class="error"></p>
+            </div>
+            <div id="registerForm" class="tabcontent">
+                <h3>Регистрация</h3>
+                <input type="text" id="regName" placeholder="Имя" required>
+                <input type="email" id="regEmail" placeholder="Email" required>
+                <input type="password" id="regPassword" placeholder="Пароль (минимум 6 символов)" required>
+                <button id="registerSubmit" class="btn-primary">Зарегистрироваться</button>
+                <p id="registerError" class="error"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="customToast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

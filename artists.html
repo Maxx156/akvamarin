@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Артисты — Аквамарин</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="bubbles"></div>
+    <header>
+        <div class="logo">
+            <i class="fas fa-water"></i> Аквамарин
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="events.html">Мероприятия</a></li>
+                <li><a href="artists.html" class="active">Артисты</a></li>
+                <li><a href="about.html">О цирке</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="auth-area">
+            <span id="userGreeting" style="display: none;">
+                Привет, <span id="userName"></span>
+                <a href="profile.html" class="profile-link"><i class="fas fa-user-circle"></i></a>
+                <button id="logoutBtn" class="logout-btn">Выйти</button>
+            </span>
+            <button id="loginBtn" class="btn-primary"><i class="fas fa-user"></i> Вход / Регистрация</button>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="page-title">Наши звёзды</h1>
+        <div class="artists-grid">
+            <div class="artist-card">
+                <img src="https://kozlovclub.ru/wp-content/uploads/2021/04/%D0%90%D0%BD%D0%BD%D0%B0-%D0%92%D0%BE%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0-800.jpg" alt="Анна Волкова">
+                <h3>Анна Волкова</h3>
+                <p class="artist-role">Художественная гимнастика на воде</p>
+                <p class="artist-bio">Заслуженная артистка, многократная чемпионка мира по синхронному плаванию. Создаёт уникальные номера с фонтанами.</p>
+            </div>
+            <div class="artist-card">
+                <img src="https://mcdn2.tvzvezda.ru/storage/default/2020/11/30/d159b5aca5594b40b1587d75fe8c6774.jpg" alt="Игорь Морской">
+                <h3>Игорь Морской</h3>
+                <p class="artist-role">Дрессировщик морских львов</p>
+                <p class="artist-bio">Работает с морскими животными более 20 лет. Его номера наполнены юмором и удивительными трюками.</p>
+            </div>
+            <div class="artist-card">
+                <img src="https://pp.userapi.com/c850728/v850728857/6874c/Qo_fHucieoI.jpg" alt="Дуэт «Брызги»">
+                <h3>Дуэт «Брызги»</h3>
+                <p class="artist-role">Водные клоуны</p>
+                <p class="artist-bio">Весёлые клоуны, которые взаимодействуют с водяными пушками и создают атмосферу праздника.</p>
+            </div>
+            <div class="artist-card">
+                <img src="https://sportvmoskve.ru/wp-content/uploads/news/9818/01.jpg" alt="Братья Гравити">
+                <h3>Братья Гравити</h3>
+                <p class="artist-role">Воздушные гимнасты над водой</p>
+                <p class="artist-bio">Акробаты, работающие под куполом цирка. Их выступления завораживают и заставляют затаить дыхание.</p>
+            </div>
+            <div class="artist-card">
+                <img src="https://bestspeakers.ru/wp-content/uploads/2023/10/Luchshie-spikery-Li-Mariya-Nedvizhimost-Psihologiya-800x600.jpg" alt="Мария Ли">
+                <h3>Мария Ли</h3>
+                <p class="artist-role">Иллюзионистка</p>
+                <p class="artist-bio">Мастер водных иллюзий: заставляет воду исчезать и появляться в самых неожиданных местах.</p>
+            </div>
+            <div class="artist-card">
+                <img src="https://circusalmaty.kz/wp-content/uploads/2024/02/water_circus.jpg" alt="Труппа «Акватика»">
+                <h3>Труппа «Акватика»</h3>
+                <p class="artist-role">Акробаты на батутах над водой</p>
+                <p class="artist-bio">Команда молодых и талантливых спортсменов, исполняющих сальто и пируэты над водной гладью.</p>
+            </div>
+            <div class="artist-card">
+                <img src="https://totma-vesti.ru/sites/default/files/content/2023-09/%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9%20%D0%9D%D0%B5%D0%BF%D0%B5%D0%B8%D0%BD%20%281%29.jpg" alt="Сергей Капелька">
+                <h3>Сергей Капелька</h3>
+                <p class="artist-role">Водный жонглёр</p>
+                <p class="artist-bio">Жонглирует шарами с водой, создавая причудливые узоры в воздухе.</p>
+            </div>
+            <div class="artist-card">
+                <img src="https://sun9-48.userapi.com/s/v1/ig2/28Tq7cdHba8OXszjHBgnSwATDdOD-NSnTsjWTh9HHz-lf1tIY-EQ--8teZaBRcEr16z6gzGtSMkoM6OnV-RJdZKw.jpg?quality=95&as=32x22,48x33,72x49,108x74,160x110,240x165,360x247,480x330,540x371,640x440,720x495,1080x742,1280x880,1440x990,2560x1760&from=bu&cs=640x0" alt="Оркестр «Аквамарин»">
+                <h3>Оркестр «Аквамарин»</h3>
+                <p class="artist-role">Живой оркестр</p>
+                <p class="artist-bio">Музыканты, исполняющие симфонические и современные произведения в сопровождении водного шоу.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="waves"></div>
+        <p>&copy; 2026 Цирк танцующих фонтанов «Аквамарин»</p>
+        <div class="social">
+            <a href="#"><i class="fab fa-vk"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="tab">
+                <button class="tablinks active" id="loginTab">Вход</button>
+                <button class="tablinks" id="registerTab">Регистрация</button>
+            </div>
+            <div id="loginForm" class="tabcontent active">
+                <h3>Вход</h3>
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Пароль" required>
+                <button id="loginSubmit" class="btn-primary">Войти</button>
+                <p id="loginError" class="error"></p>
+            </div>
+            <div id="registerForm" class="tabcontent">
+                <h3>Регистрация</h3>
+                <input type="text" id="regName" placeholder="Имя" required>
+                <input type="email" id="regEmail" placeholder="Email" required>
+                <input type="password" id="regPassword" placeholder="Пароль (минимум 6 символов)" required>
+                <button id="registerSubmit" class="btn-primary">Зарегистрироваться</button>
+                <p id="registerError" class="error"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="customToast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
